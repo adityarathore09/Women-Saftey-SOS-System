@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
-  base: '/Women-Safety-SOS-System/',   // ✅ THIS IS THE FIX
+  base: '/Women-Safety-SOS-System/',  // ✅ VERY IMPORTANT
   plugins: [react()],
 })
