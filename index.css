@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Women's Safety App Design System
+   Color palette: Calming teal primary, coral emergency, warm neutrals
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    /* Calming teal - trustworthy and safe */
+    --background: 180 20% 99%;
+    --foreground: 180 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 180 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 180 25% 15%;
+
+    /* Primary: Deep teal - trust and safety */
+    --primary: 168 76% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft sage */
+    --secondary: 168 30% 94%;
+    --secondary-foreground: 168 76% 25%;
+
+    /* Muted: Soft neutral */
+    --muted: 180 15% 95%;
+    --muted-foreground: 180 10% 45%;
+
+    /* Accent: Warm peach */
+    --accent: 20 80% 95%;
+    --accent-foreground: 20 60% 35%;
+
+    /* Emergency: Coral red - urgent but not alarming */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Emergency specific colors */
+    --emergency: 4 85% 55%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-glow: 4 85% 65%;
+
+    /* Safe/success state */
+    --safe: 152 69% 40%;
+    --safe-foreground: 0 0% 100%;
+
+    /* Warning state */
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+
+    --border: 180 20% 88%;
+    --input: 180 20% 88%;
+    --ring: 168 76% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(168 76% 30%) 0%, hsl(180 50% 35%) 100%);
+    --gradient-emergency: linear-gradient(135deg, hsl(4 85% 55%) 0%, hsl(0 72% 51%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(152 69% 40%) 0%, hsl(168 76% 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(180 20% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(180 20% 15% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(180 20% 15% / 0.12);
+    --shadow-emergency: 0 8px 40px -8px hsl(4 85% 55% / 0.35);
+    --shadow-safe: 0 8px 40px -8px hsl(152 69% 40% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 180 20% 8%;
+    --foreground: 180 15% 95%;
+
+    --card: 180 18% 12%;
+    --card-foreground: 180 15% 95%;
+
+    --popover: 180 18% 12%;
+    --popover-foreground: 180 15% 95%;
+
+    --primary: 168 60% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 15% 18%;
+    --secondary-foreground: 168 40% 80%;
+
+    --muted: 180 12% 18%;
+    --muted-foreground: 180 10% 60%;
+
+    --accent: 20 40% 20%;
+    --accent-foreground: 20 60% 85%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --emergency: 4 75% 50%;
+    --emergency-foreground: 0 0% 100%;
+    --emergency-glow: 4 75% 60%;
+
+    --safe: 152 55% 45%;
+    --safe-foreground: 0 0% 100%;
+
+    --warning: 38 85% 55%;
+    --warning-foreground: 38 85% 10%;
+
+    --border: 180 15% 22%;
+    --input: 180 15% 22%;
+    --ring: 168 60% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(168 60% 35%) 0%, hsl(180 40% 30%) 100%);
+    --gradient-emergency: linear-gradient(135deg, hsl(4 75% 50%) 0%, hsl(0 62% 45%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(152 55% 45%) 0%, hsl(168 60% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(180 18% 12%) 0%, hsl(180 15% 10%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
+    --shadow-emergency: 0 8px 40px -8px hsl(4 75% 50% / 0.4);
+    --shadow-safe: 0 8px 40px -8px hsl(152 55% 45% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    box-shadow: var(--shadow-medium);
+    @apply border-primary/20;
+  }
+
+  .emergency-glow {
+    box-shadow: var(--shadow-emergency);
+  }
+
+  .safe-glow {
+    box-shadow: var(--shadow-safe);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .btn-emergency {
+    background: var(--gradient-emergency);
+    @apply text-white font-semibold rounded-full transition-all duration-200;
+    box-shadow: var(--shadow-emergency);
+  }
+
+  .btn-emergency:hover {
+    @apply scale-105;
+    box-shadow: 0 12px 50px -10px hsl(4 85% 55% / 0.5);
+  }
+
+  .btn-emergency:active {
+    @apply scale-95;
+  }
+
+  .btn-safe {
+    background: var(--gradient-safe);
+    @apply text-white font-semibold rounded-full transition-all duration-200;
+    box-shadow: var(--shadow-safe);
+  }
+
+  .section-padding {
+    @apply px-4 py-12 sm:px-6 lg:px-8 lg:py-16;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-emergency {
+    animation: pulse-emergency 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-emergency {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(4 85% 55% / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 0 20px hsl(4 85% 55% / 0);
+    }
+  }
+
+  .animate-safe-pulse {
+    animation: safe-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes safe-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(152 69% 40% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 15px hsl(152 69% 40% / 0);
+    }
+  }
+}
